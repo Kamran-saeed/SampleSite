@@ -3,9 +3,9 @@ os: linux
 files:
   - source: /
     destination: /usr/share/nginx/html/doctorine_app
-#hooks:
-  #ApplicationStop:
-    #- location: deregister_from_elb.sh
-  #ApplicationStart:
-    #- location: register_with_elb.sh
+hooks:
+  ApplicationStop:
+    - location: deregister_from_elb.sh
+  ApplicationStart:
+    - location: register_with_elb.sh
 

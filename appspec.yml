@@ -3,4 +3,8 @@ os: linux
 files:
   - source: /
     destination: /usr/share/nginx/html/
+hooks:
+  BeforeInstall:
+    - location: remove.sh
+      runas: root
 
